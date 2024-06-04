@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;700;800&family=Corinthia:wght@400;700&family=Lobster&family=Mina:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html{
+   scroll-behavior: smooth;
+}
+body{
+   font-family: 'Poppins', sans-serif;
+}
+ 
+/******************* navigation start *************/
+.nav{
+   height: 50px;
+   width: 100%;
+   background: linear-gradient(to left, rgb(59, 51, 212), rgb(176, 207, 241) );
+   box-shadow: 2px 2px 10px rgb(59, 51, 212);
+   margin-bottom: 50px;
+   position: fixed;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: auto;
+}
+.nav .items{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav .item1{
+   width: 10%;
+   height: 50px;
+}
+.nav .item img{
+   width: 100%;
+   height: 100%;
+}
+.nav .item h2{
+   font-family: 'Poppins', sans-serif;
+   color: white;
+   font-weight: 600;
+}
+.nav .item span{
+   color: red;
+}
+.nav .item1,.item2 > .fas{
+   color: rgb(0, 38, 255);
+}
+/******************* navigation End *************/
+.container{
+   min-height: 90vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+
+/* Hero section Start */
+.hero{
+   background-image: url(img/joya.png);
+   background-size: cover;
+   background-position: top center;
+   position: relative;
+   z-index: 1;
+}
+.hero::after{
+   content: "";
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background: linear-gradient(rgb(176, 207, 241, .7), rgb(59, 51, 212,.6));
+   
+   z-index: -1;
+}
+
+.hero h1{
+   display: block;
+   width: fit-content;
+   font-size: 4rem;
+   color: transparent;
+   position: relative;
+   animation: text-reveal .5s ease forwards;
+   animation-delay:1.5s;
+}
+#hero .hero{
+   margin-top: 80px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+   justify-content: flex-start;
+}
+#hero h1:nth-child(1){
+   animation-delay:1s ;
+}
+#hero h1:nth-child(2){
+   animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+   animation: text-reveal-name 1s ease forwards;
+   animation-delay: 3s;
+}
+#hero h1 span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 0;
+   background-color: crimson;
+   animation: text-reveal-box 1s ease;
+   animation-delay:.5s ;
+}
+#hero h1:nth-child(1) span{
+   animation-delay:.5s ;
+}
+#hero h1:nth-child(2) span{
+   animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+   animation-delay: 2.5s;
+}
+/* *******************BubbleSecton****************************** */
+.smallbubble{
+   width: 100%;
+   position: absolute;
+   bottom: -70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.smallbubble img{
+   width: 50px;
+   animation: bubble 7s linear infinite;
+}
+@keyframes bubble {
+   0%{
+      transform: translateY(0);
+      opacity: 0;
+   }
+   25%{
+      opacity: 1;
+   }
+   50%{
+      opacity: 1;
+   }
+   100%{
+      transform: translateY(-100vh);
+      opacity: 0;
+   }
+}
+
+.smallbubble img:nth-child(1){
+   animation-delay: 2.5s;
+   width: 20px;
+}
+.smallbubble img:nth-child(2){
+   animation-delay: 1s;
+   width: 55px;
+}
+.smallbubble img:nth-child(3){
+   animation-delay: 4s;
+   width: 70px;
+}
+.smallbubble img:nth-child(4){
+   animation-delay: 7s;
+   width: 35px;
+}
+.smallbubble img:nth-child(5){
+   animation-delay: 2s;
+}
+.smallbubble img:nth-child(6){
+   animation-delay: 3.5s;
+   width: 80px;
+}
+.smallbubble img:nth-child(7){
+   animation-delay: 5s;
+}
+/* *******************BubbleSecton****************************** */
+/* Hero section End */
+
+
+/******** Emontion Start *******************/
+#abeg{
+ /* background-image: url(img/Banner1.jpg); */
+}
+#abeg .emotion{
+   width: 90%;
+   margin: auto;
+   margin-top: 25px;
+   margin-bottom: 25px;
+   border: 1px solid rgb(197, 168, 168);
+   box-shadow: 1px 1px 3px 3px rgba(18, 18, 228, 0.8);
+   background-image: url(img/abeg.jpg);
+   background-position: right center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-bottom: 30px;
+   border-radius: 5px;
+}   
+.emotion .head h1{
+   text-align: center;
+   font-family: 'Baloo Da 2', cursive;
+   font-size: 40px;
+   font-weight: 900;
+   color: rgb(59, 20, 97);
+   margin: 20px 0;
+}
+.emotion .explantion{
+   box-sizing: border-box;
+   padding: 0 20px;
+}
+.emotion .explantion p{
+   text-align: center;
+   font-family: 'Baloo Da 2', cursive;
+   font-weight: 600;
+   font-size: 25px;
+   color: rgb(87, 5, 107);
+}
+/******** Emontion End *******************/
+
+/*************Question Part*****************/
+.question{
+   background-image: url(img/question.jpg);
+   background-position: left center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.question .qhead h1{
+   text-align: center;
+   padding: 25px;
+   font-size: 40px;
+   color: red;
+}
+.question .qhead span{
+   font-size: 80px;
+   color: red;
+}
+
+.question .ques{
+   text-align: left;
+   font-size: 25px;
+   font-weight:600 ;
+   line-height: 50px;
+   color: rgb(49, 39, 39);
+   padding-left: 10px;
+}
+.question .ques a{
+   /* text-decoration: none; */
+   color: tomato
+}
+/*************Question Part*****************/
+
+/* *****************Explanation********************** */
+.explanation{
+   background-image: url(img/banner4.jpg);
+   background-color: gray;
+   background-position: center center;
+   background-size: cover;
+   margin: 20px 0;
+}
+.explanation .explan1 h1{
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   font-size: 35px;
+   font-weight: 600;
+   color: white;
+   padding: 25px;
+   
+}
+.explanation .explan2 {
+   box-sizing: border-box;
+   padding: 0 15px;
+}
+.explanation .explan2 p{
+   text-align: justify;
+   color: white;
+   font-size: 30px;
+}
+
+/* *****************Explanation********************** */
+
+
+
+/* *****************Propose******************************** */
+.all{
+   -webkit-animation: 100%;
+}
+ .part1{
+   margin-bottom: 20px;
+   color: white;
+   text-align: center;
+   margin: auto;
+   
+ }
+ .part1 h1{
+    display: inline-block;
+    background: crimson;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px gray;
+    margin-bottom: 20px;
+ }
+ .part2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+ }
+ .part2 .image{
+   height: 200px;
+   width: 350px;
+   margin: 10px 10px;
+   box-shadow: 1px 1px 8px .8px rgb(124, 24, 94);
+   overflow: hidden;
+   border-radius: 5px;
+ }
+ .part2 .image img{
+    height:100% ;
+    white-space: 100%;
+ }
+ .part2 .image3{
+    background-image: url(img/banner2.jpg);
+    display: flex;
+    align-items: center;
+ }
+ .part2 .image33{
+    background-color: black;
+ }
+ .part2 .image3 h3{
+    color: pink;
+    text-align: justify;
+ }
+ .part2 .image3 img{
+    margin: auto;
+    text-align: center;
+ }
+ .part .image{
+   position: absolute;     
+   top: 0;
+ }
+ .part2 .image1{
+    background-image: url(img/lovetree.jpg);
+    background-position: center center;
+    background-size: cover;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .part2 .image1 h1{
+   font-family: 'Lobster', cursive;
+   font-weight: 600;
+   font-size: 30px;
+   color: purple  ;
+ }
+ .part2 .image1::after{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 50%;
+   height: 100%;
+   background: pink;
+   z-index: 1;
+   animation: open 10s linear infinite;
+   animation-fill-mode: forwards;
+ }
+ .part2 .image1::before{
+   content: "";
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 50%;
+   height: 100%;
+   background: pink;
+   z-index: 1;
+   animation: open 10s linear infinite;
+   animation-fill-mode: forwards;
+ }
+ @keyframes open {
+    0%{
+      width: 100%;
+
+    }
+    25%{
+      width: 50%;
+    }
+    50%{
+      width: 25%;
+    }
+    100%{
+      width: 0%;
+    }
+ }
+/* *****************Propose******************************** */
+
+
+
+/* *****************Solution******************************** */
+.solution{
+   margin: 30px 0;
+
+}
+.solution h1{
+   text-align: center;
+   font-size: 40px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: crimson;
+}
+.solution .para{
+   background-image: url(img/banner5.jpg);
+   padding: 0 25px;
+}
+.solution .para p{
+   text-align: justify;
+   font-size: 30px;
+   font-weight: 500;
+   font-family: 'Baloo Da 2', cursive;
+   color: black;
+}
+/* *****************Solution******************************* */
+
+
+ 
+
+/*Contact section*/
+.section-title {
+   font-size: 40px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   margin: 20px 0;
+}
+.section-title span{
+   color: crimson;
+}
+#contact .contact{
+   flex-direction: column;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+#contact .contact-items{
+   width: 400px;
+}
+#contact .contact-item{
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   margin: 30px auto;
+   padding: 30px;
+   box-shadow: 0 0 18px 0 black;
+   border-radius: 10px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   transition: .5s;
+}
+#contact .contact-item:hover{
+   box-shadow: 0 0 5px 0 black;
+}
+#contact .contact-item .icon{
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
+   margin-bottom: 10px;
+}
+#contact .contact-item .icon img{
+   width: 100%;
+   height: 100%;
+
+}
+#contact .contact-item h1{
+   font-size: 2.5rem;
+   font-weight: 500;
+   margin-bottom: 5px;
+   
+}
+#contact .contact-item h2{
+   font-size: 1.63rem;
+   font-weight: 500;
+   line-height: 2rem;
+
+}
+/*End Contact section*/
+
+
+/* Congratulation */
+.cngratulation{
+   text-align: center;
+}
+.cngratulation a{
+   tdisplay: inline-block;
+   background: crimson;
+   font-weight: 600;
+   font-family: 'Poppins', sans-serif;
+   font-size: 35px;
+   padding: 0px 20px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 3px 3px gray;
+   margin-bottom: 20px;
+   text-decoration: none;
+   color: antiquewhite;
+}
+/* Congratulation */
+
+
+
+
+/*Footer section*/
+#footer{
+   background-image: linear-gradient(60deg,#29323c,#485563);
+}
+#footer .footer{
+   min-height: 300px;
+   flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.footer .my-img{
+   width: 100px;
+   height: 100px;
+   margin: auto;
+   border-radius: 50%;
+   background-image: url(img/Shobuj.jpg);
+   background-position: center center;
+   background-size: cover;
+}
+.footer .my-img img{
+   width: 100%;
+   height: 100%;
+
+}
+.footer .brand{
+   font-size: 40px;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+}
+.footer .brand span{
+   color: crimson;
+}
+#footer .footer h2{
+   color: white;
+   font-size: 1.5rem;
+   letter-spacing: .1rem;
+   font-weight: 500;
+   text-transform: capitalize;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   text-align: center;
+}
+#footer .footer .social-icon{
+   display: flex;
+   margin-bottom: 30px;
+}
+#footer .footer .social-item{
+   width: 50px;
+   height: 50px;
+   margin: 0 5px;
+}
+#footer .social-item img{
+   filter: grayscale(0);
+}
+
+#footer .footer p{
+   text-align: center;
+   font-size: 1.3rem;
+   color: white;
+}
+/* End Footer section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* keyframs*/
+@keyframes text-reveal-box {
+   50%{
+       width: 100%;
+       left: 0;
+   }
+   100%{
+       width: 0%;
+       left: 100%;
+   }
+}
+
+@keyframes text-reveal{
+   100%{
+       color: white;
+   }
+}
+@keyframes text-reveal-name{
+   100%{
+       color: crimson;
+   }
+}
+@keyframes animation{
+   0%{
+       opacity: 1;
+       transform: scale(1);
+   }
+   100%{
+       transform: scale(1.4);
+       opacity: 0;
+   }
+}
+/* End keyframs*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **********************Index1******************* */
+.myans{
+   height: auto;
+   width: 350px;
+   margin: auto;
+   box-shadow: 1px 1px 3px 3px pink;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   background-image: url(img/stan.jpg);
+   background-size: cover;
+   background-position: center center;
+}
+
+.myans h1{
+   text-align: center;
+   font-size: 40px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: white;
+   background: crimson;
+   display: inline;
+   margin-left: 80px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 3px 3px pink;
+}
+.myans p{
+   text-align: justify;
+   font-size: 30px;
+   font-weight: 500;
+   font-family: 'Baloo Da 2', cursive;
+   color: whitesmoke;
+   padding-top: 30px;
+}
+/* **********************Index1******************* */
+/* **********************Index2******************* */
+.findpicture{
+   height: auto;
+   width: 360px;
+   margin: auto;
+   box-shadow: 1px 1px 3px 3px pink;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   background-image: url(img/ans.jpg);
+   background-size: cover;
+   background-position: center left;
+}
+.findpicture h1{
+   text-align: center;
+   font-size: 25px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: white;
+   background: crimson;
+   display: inline;
+   margin-left: 15px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 3px 3px pink;
+}
+.findpicture p{
+   text-align: justify;
+   font-size: 30px;
+   font-weight: 500;
+   font-family: 'Baloo Da 2', cursive;
+   color: black ;
+   padding-top: 30px;
+}
+/***********************Index2********************/
+/***********************Index3********************/
+.talk{
+   height: auto;
+   width: 360px;
+   margin: auto;
+   box-shadow: 1px 1px 3px 3px pink;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   background-image: url(img/ans.jpg);
+   background-size: cover;
+   background-position: center left;
+}
+.talk h1{
+   text-align: center;
+   font-size: 25px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: white;
+   background: crimson;
+   display: inline;
+   margin-left: 25px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 3px 3px pink;
+}
+.talk p{
+   text-align: justify;
+   font-size: 30px;
+   font-weight: 500;
+   font-family: 'Baloo Da 2', cursive;
+   color: black ;
+   padding-top: 30px;
+}
+/***********************Index3********************/
+/***********************Index4********************/
+.congratulation{
+   height: auto;
+   width: 350px;
+   margin: auto;
+   box-shadow: 1px 1px 3px 3px pink;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   background-image: url(img/ban02.jpg);
+   background-size: cover;
+   background-position: center center;
+}
+
+.congratulation h1{
+   text-align: center;
+   font-size: 30px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   color: white;
+   background: crimson;
+   display: inline;
+   margin-left: 38px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 3px 3px pink;
+}
+.congratulation p{
+   text-align: justify;
+   font-size: 30px;
+   font-weight: 500;
+   font-family: 'Baloo Da 2', cursive;
+   color: darkblue;
+   padding-top: 30px;
+}
+/***********************Index4********************/
